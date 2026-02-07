@@ -1,0 +1,7 @@
+{
+  "name": "ProjectFlow AI Showcase",
+  "description": "A high-performance, AI-enhanced portfolio platform for showcasing creative and technical projects with integrated Gemini-powered insights.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
