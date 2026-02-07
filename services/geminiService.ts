@@ -1,14 +1,15 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { GeneratedProject } from "../types";
 
-const MODEL_NAME = 'gemini-3-flash-preview';
+const MODEL_NAME = "gemini-3-flash-preview";
 
 export class GeminiService {
   private ai: GoogleGenAI;
 
   constructor() {
-    this.ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+    this.ai = new GoogleGenAI({
+      apiKey: import.meta.env.VITE_GEMINI_API_KEY || "",
+    });
   }
 
   async generateProjectIdea(topic: string): Promise<GeneratedProject | null> {
@@ -23,18 +24,18 @@ export class GeminiService {
             properties: {
               title: { type: Type.STRING },
               description: { type: Type.STRING },
-              tags: { 
+              tags: {
                 type: Type.ARRAY,
-                items: { type: Type.STRING }
+                items: { type: Type.STRING },
               },
               features: {
                 type: Type.ARRAY,
-                items: { type: Type.STRING }
-              }
+                items: { type: Type.STRING },
+              },
             },
-            required: ["title", "description", "tags", "features"]
-          }
-        }
+            required: ["title", "description", "tags", "features"],
+          },
+        },
       });
 
       const text = response.text;
@@ -46,13 +47,17 @@ export class GeminiService {
     }
   }
 
-  async getChatResponse(history: { role: string; text: string }[], message: string): Promise<string> {
+  async getChatResponse(
+    history: { role: string; text: string }[],
+    message: string,
+  ): Promise<string> {
     try {
       const chat = this.ai.chats.create({
         model: MODEL_NAME,
         config: {
-          systemInstruction: "You are a helpful and charismatic AI assistant for a developer's portfolio website. You know about the developer's projects (Nexus, EtherFlow, Lumina, Aura, Zenith) and can discuss their technologies like React, AI, Blockchain, and Design. Keep answers concise and professional."
-        }
+          systemInstruction:
+            "You are a helpful and charismatic AI assistant for a developer's portfolio website. You know about the developer's projects (Nexus, EtherFlow, Lumina, Aura, Zenith) and can discuss their technologies like React, AI, Blockchain, and Design. Keep answers concise and professional.",
+        },
       });
 
       // Simple implementation since chat.sendMessage doesn't take history directly in this version
