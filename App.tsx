@@ -3,12 +3,13 @@ import { Project, ProjectCategory } from "./types";
 import { INITIAL_PROJECTS } from "./constants";
 import { ProjectCard } from "./components/ProjectCard";
 import { AIChatAssistant } from "./components/AIChatAssistant";
+import myPhoto from "./img/johnlloydtortor.JPG";
 
 const DUMMY_MEMBERS = [
   {
     name: "John Lloyd Tortor",
     role: "Gwapo",
-    avatar: "./img/johnlloydtortor.jpg",
+    avatar: myPhoto,
   },
 ];
 
