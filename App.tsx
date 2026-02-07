@@ -8,7 +8,7 @@ const DUMMY_MEMBERS = [
   {
     name: "John Lloyd Tortor",
     role: "Gwapo",
-    avatar: "https://i.sstatic.net/14h3t.png",
+    avatar: "./img/johnlloydtortor.jpg",
   },
 ];
 
