@@ -132,7 +132,7 @@ const App: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <div className="pt-10 flex gap-6">
+            <div className="pt-10 flex gap-6 hidden">
               <a
                 href="#"
                 className="text-slate-500 hover:text-white transition-colors"
@@ -465,7 +465,7 @@ const App: React.FC = () => {
             <div className="flex gap-6">
               {/* Facebook */}
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/johnlloyd.tortor.10/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:bg-indigo-600/30 hover:scale-110 transition-all text-slate-300 hover:text-white"
@@ -480,7 +480,7 @@ const App: React.FC = () => {
               </a>
               {/* GitHub */}
               <a
-                href="https://github.com"
+                href="https://github.com/de4d10ck-23"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:bg-slate-700/50 hover:scale-110 transition-all text-slate-300 hover:text-white"
@@ -495,7 +495,7 @@ const App: React.FC = () => {
               </a>
               {/* TikTok */}
               <a
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@jltteditz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:bg-rose-600/30 hover:scale-110 transition-all text-slate-300 hover:text-white"
