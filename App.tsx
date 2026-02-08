@@ -9,7 +9,7 @@ const DUMMY_MEMBERS = [
     name: "John Lloyd Tortor",
     role: "Gwapo",
     avatar:
-      "https://res.cloudinary.com/dmdxs1srn/image/upload/w_700/v1770553048/johnlloydtortor_nb2986.jpg",
+      "https://res.cloudinary.com/dmdxs1srn/image/upload/w_200/v1770553048/johnlloydtortor_nb2986.jpg",
   },
 ];
 
