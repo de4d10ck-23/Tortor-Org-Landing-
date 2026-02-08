@@ -10,6 +10,7 @@ const DUMMY_MEMBERS = [
     role: "Gwapo",
     avatar:
       "https://res.cloudinary.com/dmdxs1srn/image/upload/w_200/v1770553048/johnlloydtortor_nb2986.jpg",
+    url: "https://github.com/",
   },
 ];
 
@@ -298,20 +299,22 @@ const App: React.FC = () => {
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
           {DUMMY_MEMBERS.map((member) => (
-            <div
-              key={member.name}
-              className="glass p-6 rounded-3xl text-center group hover:bg-white/5 transition-all"
-            >
-              <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-slate-700 group-hover:border-indigo-500 transition-colors">
-                <img
-                  src={member.avatar}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
+            <a href={member.url} target="_blank" rel="noopener noreferrer">
+              <div
+                key={member.name}
+                className="glass p-6 rounded-3xl text-center group hover:bg-white/5 transition-all"
+              >
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-slate-700 group-hover:border-indigo-500 transition-colors">
+                  <img
+                    src={member.avatar}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h4 className="font-bold text-lg text-white">{member.name}</h4>
+                <p className="text-slate-500 text-sm">{member.role}</p>
               </div>
-              <h4 className="font-bold text-lg text-white">{member.name}</h4>
-              <p className="text-slate-500 text-sm">{member.role}</p>
-            </div>
+            </a>
           ))}
         </div>
       </section>

@@ -1,4 +1,3 @@
-
 export interface Project {
   id: string;
   title: string;
@@ -22,15 +21,14 @@ export interface Project {
 }
 
 export enum ProjectCategory {
-  WEB = 'Web Development',
-  MOBILE = 'Mobile Apps',
-  AI = 'Artificial Intelligence',
-  DESIGN = 'UI/UX Design',
-  CRYPTO = 'Blockchain'
+  WEB = "Web Development",
+  MOBILE = "Mobile Apps",
+  AI = "Artificial Intelligence",
+  IOT = "Internet of Things",
 }
 
 export interface AIChatMessage {
-  role: 'user' | 'model';
+  role: "user" | "model";
   text: string;
 }
 
