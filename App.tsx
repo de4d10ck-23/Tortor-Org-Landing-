@@ -3,13 +3,13 @@ import { Project, ProjectCategory } from "./types";
 import { INITIAL_PROJECTS } from "./constants";
 import { ProjectCard } from "./components/ProjectCard";
 import { AIChatAssistant } from "./components/AIChatAssistant";
-import myPhoto from "./img/johnlloydtortor.JPG";
 
 const DUMMY_MEMBERS = [
   {
     name: "John Lloyd Tortor",
     role: "Gwapo",
-    avatar: myPhoto,
+    avatar:
+      "https://res.cloudinary.com/dmdxs1srn/image/upload/w_700/v1770553048/johnlloydtortor_nb2986.jpg",
   },
 ];
 
